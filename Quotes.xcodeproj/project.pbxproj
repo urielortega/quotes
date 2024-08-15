@@ -60,11 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				A4E25C9F2C6D6B8100F859A9 /* QuotesApp.swift */,
+				A4E25CB72C6D7D5400F859A9 /* Network */,
 				A4E25CAE2C6D6DBE00F859A9 /* Models */,
 				A4E25CAD2C6D6D8900F859A9 /* Views */,
 				A4E25CA32C6D6B8400F859A9 /* Assets.xcassets */,
 				A4E25CA52C6D6B8400F859A9 /* Preview Content */,
-				A4E25CB52C6D79AC00F859A9 /* HTTPDataDownloader.swift */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -93,6 +93,14 @@
 				A4E25CB12C6D722600F859A9 /* QuoteError.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A4E25CB72C6D7D5400F859A9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A4E25CB52C6D79AC00F859A9 /* HTTPDataDownloader.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
