@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct QuotesApp: App {
+    @StateObject var quotesProvider = QuotesProvider()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(quotesProvider)
         }
     }
 }
