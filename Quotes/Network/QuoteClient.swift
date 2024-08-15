@@ -7,6 +7,11 @@
 
 import Foundation
 
+/// A client responsible for fetching quotes from a remote API.
+///
+/// `QuoteClient` handles the network requests to retrieve data from the remote API and decodes the JSON response into `Quote` models.
+///
+/// - Note: The client uses dependency injection to allow for easy testing and customization of the network layer.
 class QuoteClient {
     private let feedURL = URL(string: "https://dummyjson.com/quotes")!
     
