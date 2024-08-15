@@ -17,6 +17,7 @@
 		A4E25CB62C6D79AC00F859A9 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E25CB52C6D79AC00F859A9 /* HTTPDataDownloader.swift */; };
 		A4E25CBF2C6D7DEE00F859A9 /* QuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E25CBE2C6D7DEE00F859A9 /* QuotesTests.swift */; };
 		A4E25CC62C6D8D6C00F859A9 /* QuotesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E25CC52C6D8D6C00F859A9 /* QuotesResponse.swift */; };
+		A4E25CC82C6D914300F859A9 /* QuoteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E25CC72C6D914300F859A9 /* QuoteClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A4E25CBC2C6D7DEE00F859A9 /* QuotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E25CBE2C6D7DEE00F859A9 /* QuotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesTests.swift; sourceTree = "<group>"; };
 		A4E25CC52C6D8D6C00F859A9 /* QuotesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesResponse.swift; sourceTree = "<group>"; };
+		A4E25CC72C6D914300F859A9 /* QuoteClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A4E25CB52C6D79AC00F859A9 /* HTTPDataDownloader.swift */,
+				A4E25CC72C6D914300F859A9 /* QuoteClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E25CA22C6D6B8100F859A9 /* ContentView.swift in Sources */,
+				A4E25CC82C6D914300F859A9 /* QuoteClient.swift in Sources */,
 				A4E25CB02C6D6EBA00F859A9 /* Quote.swift in Sources */,
 				A4E25CC62C6D8D6C00F859A9 /* QuotesResponse.swift in Sources */,
 				A4E25CA02C6D6B8100F859A9 /* QuotesApp.swift in Sources */,
