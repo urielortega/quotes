@@ -10,6 +10,7 @@ import Foundation
 enum QuoteError: Error {
     case missingData
     case networkError
+    case dataDecodingError
     case unexpectedError(error: Error)
 }
 
@@ -22,6 +23,8 @@ extension QuoteError: LocalizedError {
             return NSLocalizedString("Error fetching quote data over the network.", comment: "")
         case .unexpectedError(let error):
             return NSLocalizedString("Received unexpected error. \(error.localizedDescription)", comment: "")
+        case .dataDecodingError:
+            return NSLocalizedString("Failed to decode the data. The data may be corrupted or in an unexpected format.", comment: "")
         }
     }
 }
