@@ -36,4 +36,12 @@ class QuotesTests: XCTestCase {
         XCTAssertEqual(decoded.skip, 0)
         XCTAssertEqual(decoded.limit, 30)
     }
+    
+    func testClientDoesFetchQuoteData() async throws {
+        let downloader = TestDownloader()
+        let client = QuoteClient(downloader: downloader)
+        let quotes = try await client.quotes
+        
+        XCTAssertEqual(quotes.count, 3)
+    }
 }
