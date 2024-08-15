@@ -7,8 +7,10 @@
 
 import Foundation
 
+/// ObservableObject that manages the fetching and deletion of quotes. 
+/// 
+/// It acts as a view model that interacts with the QuoteClient to fetch data and keeps track of the current list of quotes.
 @MainActor
-/// ObservableObject that manages the fetching and deletion of quotes. It acts as a view model that interacts with the QuoteClient to fetch data and keeps track of the current list of quotes.
 class QuotesProvider: ObservableObject {
     /// Quotes currently fetched and available.
     @Published var quotes: [Quote] = []
