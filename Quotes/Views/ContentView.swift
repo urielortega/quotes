@@ -14,13 +14,32 @@ struct ContentView: View {
     @State private var hasError = false
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                ForEach(provider.quotes) { quote in
+                    VStack(alignment: .leading) {
+                        Text(quote.text)
+                            .padding(.bottom)
+                        
+                        Text(quote.author)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .onDelete(perform: deleteQuotes)
+            }
+            .listStyle(.inset)
+            .navigationTitle("Quotes")
+            // .toolbar(content: toolbarContent)
+            // .environment(\.editMode, $editMode)
+            .refreshable {
+                await fetchQuotes()
+            }
+            .alert(isPresented: $hasError, error: error) {}
         }
-        .padding()
+        .task {
+            await fetchQuotes()
+        }
     }
 }
 
