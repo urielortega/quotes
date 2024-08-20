@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var provider: QuotesProvider
+    @State var isLoading = false
+    @State private var error: QuoteError?
+    @State private var hasError = false
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
