@@ -24,6 +24,25 @@ struct ContentView: View {
     }
 }
 
+extension ContentView {
+    func deleteQuotes(at offsets: IndexSet) {
+        provider.deleteQuotes(atOffsets: offsets)
+    }
+    
+    func fetchQuotes() async {
+        isLoading = true
+        
+        do {
+            try await provider.fetchQuotes()
+        } catch {
+            self.error = error as? QuoteError ?? .unexpectedError(error: error)
+            self.hasError = true
+        }
+        
+        isLoading = false
+    }
+}
+
 #Preview {
     ContentView()
         .environmentObject(
