@@ -26,4 +26,11 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(
+            QuotesProvider(
+                client: QuoteClient(
+                    downloader: TestDownloader()
+                )
+            )
+        )
 }
